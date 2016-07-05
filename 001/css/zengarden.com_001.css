@@ -44,7 +44,8 @@ body {
 	font-size:12px;
 	font-family:georgia,​sans-serif;
 	line-height: 1.9em;
-	background-color : #fff;
+	/*background-color : #fff;*/
+	background: #fff url("../image/lamei.jpg") no-repeat scroll left top;
 }
 .page-wrapper {
 	margin:0 0 40px 0;
@@ -57,37 +58,73 @@ body {
 	min-width : 470px;
 	height : 106px;
 	background-clip: padding-box;
+	/*background: rgba(255,255,255,0.8);;*/
+	//background-color : #fff;
 }
 
-.header:before{
+.header:before {
     position : absolute;
     bottom : -200px;
     right : 150px;
-    width : 300px;
-    height : 400px;
+    width : 400px;
+    height : 1px;
     content:"";
-    //z-index : -1;
-    background-color : transparent;
-	box-shadow:1px 1px 3px rgba(150,150,150,0.2);
-	//transform:skew(0deg,1deg);
+    box-shadow:3px 3px 1px #fff;
+    background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+ }
+
+ .header h1:before {
+ 	position : absolute;
+    bottom : -200px;
+    right : 150px;
+    width : 1px;
+    height : 300px;
+    content:"";
+    box-shadow: 3px 3px 1px #fff;
+    background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0));
  }
 
 .header:after {
     position : absolute;
     top : 10px;
-    left : 105px;
+    left : 109px;
     width : 400px;
-    height : 300px;
+    height : 1px;
     content:"";
-    //z-index : 0;
-    background-color : transparent;
-	box-shadow:1px 1px 3px rgba(150,150,150,0.2);
-	transform:rotate(180deg);
+    box-shadow:-2px -3px 1px #fff;
+    background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
  }
 
+.header h1:after {
+	position : absolute;
+    top : 10px;
+    left : 109px;
+    width : 1px;
+    height : 300px;
+    content:"";
+    box-shadow:-2px -3px 1px  #fff;
+    background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+.content:before {
+ 	position : absolute;
+    top : 10px;
+    left : 110px;
+    width : 1310px;
+    height : 1110px;
+    content : "";
+    z-index : -1;
+    background-color : #fff;
+    background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.8)10%,rgba(255,255,255,1)24%,
+    	rgba(255,255,255,1)50%,rgba(255,255,255,1) 75%,rgba(255,255,255,0.8) 85%,rgba(255,255,255,0.7) 100%);
+ }
+ 
+
+
 .header h1 {
-	float:left;
-	margin-top: :10px;
+	float : left;
+	margin-top : 0;
+	padding-top : 26.8px;
 	width:500px;
 	height:87px;
 	//text-indent: 100%;
@@ -96,7 +133,9 @@ body {
 	line-height: 76%;//行间距
 	white-space: nowrap;
 	overflow: hidden;
-	//background: url("../image/h1.gif") no-repeat scroll left top;
+	//background : rgba(255,255,255,0.2);
+	//background-image : linear-gradient(to bottom , #ddd, #fff);
+	/*//background: url("../image/h1.gif") no-repeat scroll left top;*/
 }
 .header h2 {
 	float :right;
@@ -115,8 +154,8 @@ body {
 
 }
 .main {
-	padding:0 150px 0 110px;
-	margin-top: 0;
+	margin:0 150px 0 110px;
+	/*background-color : rgba(255,255,255,0.8);;*/
 }
 .summary {
 	float: left;
@@ -188,6 +227,7 @@ body {
 	margin-left :  110px;
 	margin-right : 150px;
 	text-align :center;
+	/*background-color : rgba(255,255,255,0.8);*/
 }
 .footer a {
 	margin-right: 25px;
