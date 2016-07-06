@@ -1,0 +1,122 @@
+body {
+	margin : 0;
+	padding : 0;
+	font-size : 100%;
+    line-height : 26px;
+	background-color : #f6efe5;
+}
+.header {
+	width :40%;
+	height : 800px;
+	background-color : #c879b2;
+}
+.header h1 {
+	display : inline-block;
+	margin : 0;
+	width : 50%;
+}
+
+.header h2 {
+	position : relative;
+	top : -27px;
+	left : 50%;
+	margin : 0;
+	width : 50%;
+	height : 800px;
+	background : #0d2c40 url("../image/icon-star.svg") no-repeat bottom center;
+	background-size : 100%;
+}
+
+.summary {
+	position : absolute;
+	top: 0;
+	left : 40%;
+	width:60%;
+	height : 800px;
+	background : #c879b2 url("../image/icons-3-pack.svg") no-repeat scroll bottom center;
+	background-size : 100%
+	
+}
+.part-one {
+	margin-left : 380px;
+	padding-top : 128px;
+	padding-bottom : 128px;
+	height : 210px;
+}
+
+.part-one p {
+	width : 739px;
+}
+
+.part-one p:last-child {
+	position : relative;
+	top : -327px;
+	left : 50%;
+	padding : 160px 0 320px 0;
+	width : 25%;
+	background: rgba(0, 188, 217, 0.8);
+}
+
+.part-two {
+	padding : 320px 0 320px 0;
+	height : 450px;
+	background : url("../image/mid-century-1.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+.about {
+	position : relative;
+	top : 0px;
+	left : 0px;
+	padding : 32px 0 32px 0;
+	width : 40%;
+	height : 386px;
+	background : #0d2c40 url("../image/icon-half.svg") no-repeat center right;
+	background-size : 40%;
+}
+
+.Participation {
+	display : inline-block;
+	position : relative;
+	top : 0;
+	left : 20%;
+	width : 40%;
+	background-color : #f6efe5;
+}
+
+.Benefits {
+	display : inline-block;
+	position : relative;
+	top : 50px;
+	left : 19.5%;
+	padding : 352px 0 400px 0;
+	width : 20%;
+	background : rgba(0, 188, 217, 0.8) url("../image/icon-circles.svg") no-repeat scroll left top;
+	background-size : 100%
+}
+
+.Requirements {
+	position : relative;
+	top : -100px;
+	left : 0;
+	
+}
+
+.Requirements:before {
+	position : relative;
+	top : 0;
+	left : 0;
+	z-index : 100;
+	margin-top : 0;
+	padding : 16px;
+	width : 40%;
+	height :640px;
+	background: url("../image/mid-century-2.jpg") no-repeat left center;
+}
+
+.aside{
+	position : relative;
+	top : 1000px;
+	left : 0;
+	background: #c879b2;
+}
