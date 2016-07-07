@@ -48,7 +48,7 @@ body {
 	background: #fff url("../image/lamei.jpg") no-repeat scroll left top;
 }
 .page-wrapper {
-	margin:0 0 40px 0;
+	margin:0 0 20px 0;
 	//background: transparent url("../image/zen-bg.jpg") no-repeat scroll left top;
 }
 .header {
@@ -64,19 +64,19 @@ body {
 
 .page-wrapper:before {
     position : absolute;
-    bottom : 30px;
-    right : 150px;
+    top : 1170px;
+    right : 150px; 
     width : 400px;
-    height : 2px;
+    height : 1px;
     content:"";
     background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
  }
 
  .page-wrapper h1:before {
  	position : absolute;
-    bottom : 30px;
+    top : 870px;
     right : 150px;
-    width : 2px;
+    width : 1px;
     height : 300px;
     content:"";
     background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0));
@@ -85,9 +85,9 @@ body {
 .header:after {
     position : absolute;
     top : 10px;
-    left : 109px;
+    left : 110px;
     width : 400px;
-    height : 2px;
+    height : 1px;
     content:"";
     background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
  }
@@ -95,38 +95,44 @@ body {
 .header h1:after {
 	position : absolute;
     top : 10px;
-    left : 109px;
-    width : 2px;
+    left : 110px;
+    width : 1px;
     height : 300px;
     content:"";
     background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0));
 }
 
-.content:before {
- 	position : absolute;
-    top : 10px;
-    left : 110px;
-    margin-right: 150px;
-    width : 86.35%;
-    height : 1070px;
-    content : "";
-    z-index : -1;
-    background-color : #fff;
-    background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.8)10%,rgba(255,255,255,1)24%,
-    	rgba(255,255,255,1)50%,rgba(255,255,255,1) 75%,rgba(255,255,255,0.8) 85%,rgba(255,255,255,0.7) 100%);
- }
+@media screen and (min-width: 1300px) {
+	.content:before {
+		float :left;
+	 	position : absolute;
+	    top : 0;
+	    left : 0;
+	    width :80.7%;
+	    margin :10px 150px 0 110px;
+	    height : 1160px;
+	    content : "";
+	    z-index : -1;
+	    background-color : #fff;
+	    background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.8)10%,rgba(255,255,255,1)24%,
+	    	rgba(255,255,255,1)50%,rgba(255,255,255,1) 75%,rgba(255,255,255,0.8) 85%,rgba(255,255,255,0.7) 100%);
+	 	
+	 }
+
+}
  
 
 
 .header h1 {
 	float : left;
 	margin-top : 0;
+	margin-left: 10px;
 	padding-top : 26.8px;
-	width:500px;
+	width:186px;
 	height:87px;
-	//text-indent: 100%;
 	color:#A39C7C;
 	font-size: 40px;
+	font-weight: lighter;
 	line-height: 76%;//行间距
 	white-space: nowrap;
 	overflow: hidden;
@@ -135,9 +141,9 @@ body {
 	float :right;
 	clear : right;
 	margin-top : 70px;
+	margin-right: 20px;
 	height : 22px;
-	color : grey;
-	font-style : italic;
+	color : rgb(196,193,178);
 	font-weight : lighter;
 	white-space : nowrap;
 	overflow : hidden;
@@ -152,9 +158,10 @@ body {
 	float: left;
 	clear:both;
 	margin-left:20px;
+	margin-bottom : 28px;
 	padding-right: 15px;
 	width:160px;
-	font-size: 14px;
+	font-size: 13.2px;
 	font-family: georgia;
 	font-style: italic;
 	text-align: center;
@@ -165,8 +172,12 @@ body {
 .content {
 	clear : right;
 	padding-left: 15px;
-	padding-bottom : 40px;
+	padding-bottom : 10px;
 	min-width : 470px;
+}
+.content p {
+	margin-top : 0;
+	line-height: 22.6px;
 }
 .article {
 	font-size: 13px;
@@ -182,25 +193,28 @@ body {
 	right: 0px;
 	width:150px;
 }
+
 .side-line .link-style {
-    padding: 10px;
+    padding: 1px 10px 1px 10px;
     width: 130px;
     background-color: #DED9BC;
 }
 .side-line .link-style h3 {
-	color: grey;
-    font: italic 14px georgia;
+	color: rgb(190,184,152);
+    font: 11px georgia;
     letter-spacing: 1px;
-    border-bottom: 1px solid grey;
+    text-shadow : 2px 2px 2px #fff;
 }
 .side-line .link-style ul {
 	margin:0;
 	padding: 0;
 }
 .side-line .link-style li {
-    display: block;
-    font-size: 11px;
-    line-height: 20px;
+	padding : 5px 0 5px 0;
+    font-size: 10px;
+    font-family : verdana,​sans-serif;
+    line-height: 13px;
+    font-weight : 400;
 	list-style-type: none;
 	border-bottom: 1px solid grey;
 }
@@ -215,6 +229,7 @@ body {
 	clear : both;
 	margin-left :  110px;
 	margin-right : 150px;
+	padding-bottom : 40px;
 	text-align :center;
 	/*background-color : rgba(255,255,255,0.8);*/
 }
@@ -222,6 +237,7 @@ body {
 	margin-right: 25px;
 	font-size: 14px;
 }
+
 a {
 	color: #b7a5df;
     font-weight: bold;
@@ -239,9 +255,7 @@ h3 {
 	font-weight: normal;
 	letter-spacing: 1px;
 }
-.special-color {
-	color:#E6E6FA ;
-}
+
 .special-color:hover,.special-color:focus,
 .special-color:active {
 	color:#b7a5df;
