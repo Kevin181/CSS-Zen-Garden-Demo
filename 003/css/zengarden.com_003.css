@@ -1,0 +1,533 @@
+@media screen and (min-width:1000px) {
+body {
+	margin : 0;
+	padding : 0;
+	font : 75% georgia;
+    text-align : center;
+    color : #fff;
+    background-color : #748A9B ;
+}
+
+a {
+    font-weight: bold;
+    color: #A7D3F6;
+}
+
+a:hover,a:active,a:focus {
+	color : #fff;
+	font-weight : bold;
+}
+
+abbr {
+    border-bottom : 1px dotted  #fff;
+}
+
+.page-wrapper {
+	width: 50%;
+	margin-left : 25%;
+	margin-right : 25%;
+	background-color : #849AA9;
+}
+
+.header {
+	height : 8.5em;
+	background : transparent url("../image/header.png") repeat top left;
+	box-shadow : 0 3px 6px black;
+}
+.header:before {
+	position: absolute;
+	left:30%;
+	top :57em;
+	padding-top : 6px;
+	width : 9em;
+	height : 3em;
+	content : "storm weather by dave shea";
+	color :rgba(0,0,0,0.2);
+	font-size : 3px;
+	border-radius : 4em/1.5em;
+	background-color : rgba(255,255,255,0.1);
+}
+
+.header:after {
+	position: absolute;
+	left:25.45%;
+	top :0.40em;
+	width : 49%;
+	height : 7.5em;
+	content : "";
+	background-color : transparent;
+	border : 1px solid rgba(255,255,255,0.6);
+	border-radius : 6px;
+
+}
+
+.header h1 {
+	display :inline-block;
+	margin : 0.6em 0 0 -16em;
+	width : 9em;
+	text-align : left;
+	color : rgba(255,255,255,0.8);
+	font-size : 3em;
+	font-weight : lighter;
+	border-top : medium double rgba(255,255,255,0.8);
+}
+
+.header h2 {
+	margin : 0 0 0 2em;
+	width: 324px;
+	text-align : center;
+	color : rgba(255,255,255,0.8);
+	font-size : 9px;
+	font-weight : lighter;
+	font-style : italic;
+	text-transform : lowercase;
+	border-bottom: medium double rgba(255,255,255,0.8);
+}
+
+.introduce-img:before {
+	position : absolute;
+	top : 13em;
+	content :"";
+	width :12.5%;
+	margin-left : -22.3%;
+	height :15.6em;
+	background : #fff url("../image/wallpaper.jpg") no-repeat bottom left;
+	text-align: center;
+}
+.introduce-img {
+	width :25%;
+	margin-top : 4.45em;
+	margin-left : 38%;
+	height :15.6em;
+	background : transparent url("../image/wallpaper.jpg") no-repeat top left;
+}
+
+.introduce-img:after {
+	position : absolute;
+	top : 13em;
+	content :"";
+	width :12.5%;
+	margin-left : 9.6%;
+	height :15.6em;
+	background : #fff url("../image/wallpaper.jpg") no-repeat top right;
+	opacity: 0.8;
+}
+
+.expand:before {
+	position : absolute;
+	top : 11.5em;
+	content :"";
+	padding :1.5em;
+	width :12.5%;
+	margin-left : 8.65%;
+	height :15.6em;
+	background-color : #fff ;
+	box-shadow : 0 4px 4px grey;
+}
+
+.expand:after {
+	position : absolute;
+	top : 11.5em;
+	content :"";
+	width :12.5%;
+	margin-left : -7.2%;
+	height :15.6em;
+	background-color : rgba(255,255,255,0.2) ;
+	border : 1.5em solid #fff;
+	box-shadow : 0 4px 4px grey;
+}
+
+.normal:before {
+	position : absolute;
+	top : 11.5em;
+	content :"";
+	width :12.5%;
+	margin-left : -23.3%;
+	height :15.6em;
+	background-color : rgba(255,255,255,0.2);
+	border : 1.5em solid #fff;
+	box-shadow : 0 4px 4px grey;
+}
+
+.article {
+	display: inline-block;
+	width :60%;
+	margin-left: 33.5%;
+	text-align : left;
+}
+
+.article h3 {
+	margin-bottom : 0;
+}
+.article p {
+	font-size : 12px;
+	line-height : 15px;
+	text-align: justify;
+}
+
+.article:first-of-type {
+	position : absolute;
+	top :30em;
+	left :25.8%;
+	margin-left : 2em;
+	width : 12.5%;
+}
+
+.article:first-of-type p {
+	font-style : italic;
+	font-size : 12px;
+	text-align: justify;
+	line-height : 20px;
+}
+
+.contentInfo {
+	margin-left : 36.8%;
+	width : 60%;
+	font-size : 12px;
+	line-height : 15px;
+	text-align : left;
+}
+
+.footer {
+	margin-right : 2em;
+	text-align : right;
+}
+
+.footer a {
+	padding : 6px;
+	border : 1px;
+	margin-right : 10px;
+	font-size : 12px;
+	font-weight : bold;
+}
+
+.footer a:hover,.footer a:active,.footer a:focus {
+	color : grey;
+	border-color : transparent;
+	background-color : #fff;
+}
+.link-style {
+	margin-left : 35%;
+	text-align : left;
+}
+
+.link-style:first-of-type {
+	position : absolute;
+	top : 1.5em;
+	left : 18%;
+	width :25%;
+	color : grey;
+	font-weight : normal;
+	text-transform : lowercase;
+}
+
+.link-style:first-of-type h3 {
+	color : #fff;
+	font-size : 75%
+}
+
+.link-style:first-of-type a {
+	color :#fff;
+}
+
+.link-style:first-of-type a:hover,
+.link-style:first-of-type a:active,
+.link-style:first-of-type a:focus {
+	color: #B7A5DF;
+}
+
+.link-style h3 {
+	margin : 0;
+}
+
+.link-style ul {
+	margin : 0;
+	padding : 0;
+}
+
+.link-style ul li {
+	display : inline-block;
+	list-style-type : none;
+}
+
+.appendix+p {
+	padding-top: 3em;
+	font-size : 1.4em;
+}
+.extra-expand {
+	font-size : 16px;
+	font-size : 2.5em;
+}
+
+.constrict {
+	text-align : right;
+}
+
+}
+
+@media screen and (min-width:600px) and (max-width:999px) {
+body {
+	margin : 0;
+	padding : 0;
+	font : 75% georgia;
+    text-align : center;
+    color : #fff;
+    background-color : #748A9B ;
+}
+
+a {
+    font-weight: bold;
+    color: #A7D3F6;
+}
+
+a:hover,a:active,a:focus {
+	color : #fff;
+	font-weight : bold;
+}
+
+abbr {
+    border-bottom : 1px dotted  #fff;
+}
+
+.page-wrapper {
+	width: 80%;
+	margin-left : 10%;
+	margin-right : 10%;
+	background-color : #849AA9;
+}
+
+.header {
+	height : 10.5em;
+	background : transparent url("../image/header.png") repeat top left;
+	box-shadow : 0 3px 6px black;
+}
+.header:before {
+	position: absolute;
+	left:13%;
+	top :57em;
+	padding-top : 6px;
+	width : 9em;
+	height : 3em;
+	content : "storm weather by dave shea";
+	color :rgba(0,0,0,0.2);
+	font-size : 3px;
+	border-radius : 4em/1.5em;
+	background-color : rgba(255,255,255,0.1);
+}
+
+.header:after {
+	position: absolute;
+	left:25.45%;
+	top :0.40em;
+	width : 49%;
+	height : 7.5em;
+	content : "";
+	background-color : transparent;
+	border : 1px solid rgba(255,255,255,0.6);
+	border-radius : 6px;
+
+}
+
+.header h1 {
+	display :inline-block;
+	margin : 0.6em 0 0 -10.5em;
+	width : 9em;
+	text-align : left;
+	color : rgba(255,255,255,0.8);
+	font-size : 3em;
+	font-weight : lighter;
+	border-top : medium double rgba(255,255,255,0.8);
+}
+
+.header h2 {
+	margin : 0 0 0 3.5em;
+	width: 324px;
+	text-align : center;
+	color : rgba(255,255,255,0.8);
+	font-size : 9px;
+	font-weight : lighter;
+	font-style : italic;
+	text-transform : lowercase;
+	border-bottom: medium double rgba(255,255,255,0.8);
+}
+
+.introduce-img:before {
+	position : absolute;
+	top : 13em;
+	content :"";
+	width :12.5%;
+	margin-left : -22.3%;
+	height :15.6em;
+	background : #fff url("../image/wallpaper.jpg") no-repeat bottom left;
+	text-align: center;
+}
+.introduce-img {
+	width :25%;
+	margin-top : 4.45em;
+	margin-left : 38%;
+	height :15.6em;
+	background : transparent url("../image/wallpaper.jpg") no-repeat top left;
+}
+
+.introduce-img:after {
+	position : absolute;
+	top : 13em;
+	content :"";
+	width :12.5%;
+	margin-left : 9.6%;
+	height :15.6em;
+	background : #fff url("../image/wallpaper.jpg") no-repeat top right;
+	opacity: 0.8;
+}
+
+.expand:before {
+	position : absolute;
+	top : 11.5em;
+	content :"";
+	padding :1.5em;
+	width :12.5%;
+	margin-left : 8.65%;
+	height :15.6em;
+	background-color : #fff ;
+	box-shadow : 0 4px 4px grey;
+}
+
+.expand:after {
+	position : absolute;
+	top : 11.5em;
+	content :"";
+	width :12.5%;
+	margin-left : -7.2%;
+	height :15.6em;
+	background-color : rgba(255,255,255,0.2) ;
+	border : 1.5em solid #fff;
+	box-shadow : 0 4px 4px grey;
+}
+
+.normal:before {
+	position : absolute;
+	top : 11.5em;
+	content :"";
+	width :12.5%;
+	margin-left : -23.3%;
+	height :15.6em;
+	background-color : rgba(255,255,255,0.2);
+	border : 1.5em solid #fff;
+	box-shadow : 0 4px 4px grey;
+}
+
+.article {
+	display: inline-block;
+	width :80%;
+	text-align : left;
+}
+
+.article h3 {
+	margin-bottom : 0;
+}
+.article p {
+	font-size : 12px;
+	line-height : 15px;
+	text-align: justify;
+}
+
+/*.article:first-of-type {
+	position : absolute;
+	top :30em;
+	left :13%;
+	margin-left : 2em;
+	width : 25%;
+}*/
+
+.article:first-of-type p {
+	font-style : italic;
+	font-size : 12px;
+	text-align: justify;
+	line-height : 20px;
+}
+
+.contentInfo {
+	margin-left : 10%;
+	width : 60%;
+	font-size : 12px;
+	line-height : 15px;
+	text-align : left;
+}
+
+.footer {
+	margin-right : 5em;
+	text-align : right;
+}
+
+.footer a {
+	padding : 6px;
+	border : 1px;
+	margin-right : 10px;
+	font-size : 12px;
+	font-weight : bold;
+}
+
+.footer a:hover,.footer a:active,.footer a:focus {
+	color : grey;
+	border-color : transparent;
+	background-color : #fff;
+}
+.link-style {
+	margin-left : 10%;
+	text-align : left;
+}
+
+.link-style:first-of-type {
+	position : absolute;
+	top : 0.5em;
+	left : 40%;
+	width : 50%;
+	color : grey;
+	font-weight : normal;
+	text-transform : lowercase;
+}
+
+.link-style:first-of-type h3 {
+	color : #fff;
+	font-size : 75%
+}
+
+.link-style:first-of-type a {
+	color :#fff;
+}
+
+.link-style:first-of-type a:hover,
+.link-style:first-of-type a:active,
+.link-style:first-of-type a:focus {
+	color: #B7A5DF;
+}
+
+.link-style h3 {
+	margin : 0;
+}
+
+.link-style ul {
+	margin : 0;
+	padding : 0;
+}
+
+.link-style ul li {
+	display : inline-block;
+	list-style-type : none;
+}
+
+.appendix+p {
+	padding-top: 3em;
+	font-size : 1.4em;
+}
+.extra-expand {
+	font-size : 16px;
+	font-size : 2.5em;
+}
+
+.constrict {
+	text-align : right;
+}
+
+}
+
