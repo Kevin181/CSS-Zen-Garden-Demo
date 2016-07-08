@@ -44,12 +44,11 @@ body {
 	font-size:12px;
 	font-family:georgia,​sans-serif;
 	line-height: 1.9em;
-	/*background-color : #fff;*/
-	background: #fff url("../image/lamei.jpg") no-repeat scroll left top;
+	background: #fff url("../image/blossoms.jpg") no-repeat scroll right bottom;
 }
 .page-wrapper {
 	margin:0 0 20px 0;
-	//background: transparent url("../image/zen-bg.jpg") no-repeat scroll left top;
+	background: transparent url("../image/zen-bg.jpg") no-repeat scroll left top;
 }
 .header {
 	margin-top : 10px;
@@ -62,47 +61,90 @@ body {
 	//background-color : #fff;
 }
 
-.page-wrapper:before {
-    position : absolute;
-    top : 1170px;
-    right : 150px; 
-    width : 400px;
-    height : 1px;
-    content:"";
-    background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
- }
-
- .page-wrapper h1:before {
- 	position : absolute;
-    top : 870px;
-    right : 150px;
-    width : 1px;
-    height : 300px;
-    content:"";
-    background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0));
- }
-
 .header:after {
     position : absolute;
-    top : 10px;
-    left : 110px;
+    top : 18px;
+    left : 102px;
     width : 400px;
     height : 1px;
     content:"";
-    background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+    background: linear-gradient(to right, rgba(200,200,200,1), rgba(200,200,200,0));
  }
 
 .header h1:after {
 	position : absolute;
-    top : 10px;
-    left : 110px;
+    top : 18px;
+    left : 102px;
     width : 1px;
     height : 300px;
     content:"";
-    background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0));
+    background: linear-gradient(to bottom, rgba(200,200,200,1), rgba(200,200,200,0));
 }
 
+@media screen  and (max-width: 768px) {
+	.side-line {
+		position: relative;
+		min-height: 60px;
+	}
+
+	.side-line div {
+
+	}
+	nav {
+		position: relative;
+		min-height: 60px;
+	}
+
+	nav ul {
+		width: 50px;
+		height : 15px;
+		padding: 5px 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border: solid 1px #aaa;
+		background: #fff url("../image/menu.png") no-repeat center center;
+		border-radius: 5px;
+		box-shadow: 0 1px 2px rgba(0,0,0,.3);
+	}
+	nav li {
+		display: none;
+		margin: 0;
+	}
+
+	nav ul:hover {
+		width:180px;
+		background-image: none;
+	}
+	nav ul:hover li {
+		display: block;
+		margin: 0 0 5px;
+	}
+
+}
+
+
 @media screen and (min-width: 1300px) {
+	.page-wrapper:before {
+	    position : absolute;
+	    top : 1130px;
+	    right : 150px; 
+	    width : 400px;
+	    height : 1px;
+	    content:"";
+	    background: linear-gradient(to left, rgba(200,200,200,1), rgba(200,200,200,0));
+	 }
+
+	 .page-wrapper:after {
+	 	position : absolute;
+	    top : 830px;
+	    right : 150px;
+	    width : 1px;
+	    height : 300px;
+	    content:"";
+	    background: linear-gradient(to top, rgba(200,200,200,1), rgba(200,200,200,0));
+	 }
+
 	.content:before {
 		float :left;
 	 	position : absolute;
@@ -110,7 +152,45 @@ body {
 	    left : 0;
 	    width :80.7%;
 	    margin :10px 150px 0 110px;
-	    height : 1160px;
+	    height : 1120px;
+	    content : "";
+	    z-index : -1;
+	    background-color : #fff;
+	    background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.8)10%,rgba(255,255,255,1)24%,
+	    	rgba(255,255,255,1)50%,rgba(255,255,255,1) 75%,rgba(255,255,255,0.8) 85%,rgba(255,255,255,0.7) 100%);
+	 	
+	 }
+}
+
+@media screen and (min-width: 1600px) {
+	.page-wrapper:before {
+	    position : absolute;
+	    top : 980px;
+	    right : 145px; 
+	    width : 400px;
+	    height : 1px;
+	    content:"";
+	    background: linear-gradient(to left, rgba(200,200,200,1), rgba(200,200,200,0));
+	 }
+
+	 .page-wrapper:after {
+	 	position : absolute;
+	    top : 680px;
+	    right : 145px;
+	    width : 1px;
+	    height : 300px;
+	    content:"";
+	    background: linear-gradient(to top, rgba(200,200,200,1), rgba(200,200,200,0));
+	 }
+
+	.content:before {
+		float :left;
+	 	position : absolute;
+	    top : 0;
+	    left : 0;
+	    width :86.55%;
+	    margin :10px 150px 0 110px;
+	    height : 970px;
 	    content : "";
 	    z-index : -1;
 	    background-color : #fff;
@@ -125,23 +205,23 @@ body {
 
 .header h1 {
 	float : left;
-	margin-top : 0;
-	margin-left: 10px;
-	padding-top : 26.8px;
-	width:186px;
+	clear : both;
+	margin: 25px 0 0 10px;
+	width:219px;
 	height:87px;
-	color:#A39C7C;
+	color:transparent;
 	font-size: 40px;
 	font-weight: lighter;
 	line-height: 76%;//行间距
 	white-space: nowrap;
 	overflow: hidden;
+	background: transparent url("../image/h1.gif") no-repeat top left;
 }
 .header h2 {
 	float :right;
 	clear : right;
 	margin-top : 70px;
-	margin-right: 20px;
+	margin-right: 33px;
 	height : 22px;
 	color : rgb(196,193,178);
 	font-weight : lighter;
@@ -157,9 +237,7 @@ body {
 .summary {
 	float: left;
 	clear:both;
-	margin-left:20px;
-	margin-bottom : 28px;
-	padding-right: 15px;
+	margin: 19px 20px 20px 10px;
 	width:160px;
 	font-size: 13.2px;
 	font-family: georgia;
@@ -167,63 +245,84 @@ body {
 	text-align: center;
 }
 .summary p {
-	line-height: 200%;
+	line-height: 29px;
 }
 .content {
 	clear : right;
-	padding-left: 15px;
-	padding-bottom : 10px;
+	padding : 0 30px 10px 10px;
 	min-width : 470px;
 }
 .content p {
 	margin-top : 0;
-	line-height: 22.6px;
+	text-align : justify;
+	line-height: 22.667px;
 }
 .article {
-	font-size: 13px;
-	line-height: 23px;
+	font-size: 12px;
+	/*line-height: normal;*/
+}
+.article:first-of-type {
+	position: relative;
+	top: 10px;
+	left : 0px;
 }
 .presentation-image {
 	height: 110px;
 	background: url("../image/cr2.gif") no-repeat scroll left top;
 }
-.side-line {
-	position: absolute;
-	top: 50px;
-	right: 0px;
-	width:150px;
+
+@media screen and (min-width: 641px) {
+	.side-line {
+		position: absolute;
+		top: 50px;
+		right: 0px;
+		width:145px;
+		border-bottom : 15px solid #DED9BC;
+	}
+
+	.side-line .link-style {
+	    padding: 1px 10px 1px 10px;
+	    width: 130px;
+	    background-color: #DED9BC;
+	}
+	.side-line .link-style h3 {
+		margin :25px 0 0 5px;
+		color: rgb(190,184,152);
+	    font: 11px georgia;
+	    letter-spacing: 1px;
+	    text-shadow : 0 -2px 1px #fff;
+	}
+
+	.side-line .link-style li:before {
+		content : "";
+		display : block;
+		margin: 5px 0 5px -10px;
+		width : 145px;
+		height :1px;
+		background-image: linear-gradient(to right, rgba(30,30,30,0) 0%,rgba(180,180,180,0.6) 20%,
+			rgba(180,180,180,0.8) 30%,rgba(180,180,180,1) 40%,rgba(180,180,180,1) 60%,rgba(180,180,180,0.8) 70%,
+			rgba(180,180,180,0.6) 80%,rgba(30,30,30,0) 100%);
+	}
+	.side-line .link-style ul {
+		margin:0;
+		padding: 0;
+	}
+	.side-line .link-style li {
+		padding : 0;
+	    font-size: 10px;
+	    font-family : verdana,​sans-serif;
+	    line-height: 13px;
+	    font-weight : 400;
+		list-style-type: none;
+	}
+	.side-line .link-style .line-style-none{
+		border-bottom:0;
+	}
+	.side-line .link-style li a {
+		color:#988f5e;
+		font-weight: 700;
 }
 
-.side-line .link-style {
-    padding: 1px 10px 1px 10px;
-    width: 130px;
-    background-color: #DED9BC;
-}
-.side-line .link-style h3 {
-	color: rgb(190,184,152);
-    font: 11px georgia;
-    letter-spacing: 1px;
-    text-shadow : 2px 2px 2px #fff;
-}
-.side-line .link-style ul {
-	margin:0;
-	padding: 0;
-}
-.side-line .link-style li {
-	padding : 5px 0 5px 0;
-    font-size: 10px;
-    font-family : verdana,​sans-serif;
-    line-height: 13px;
-    font-weight : 400;
-	list-style-type: none;
-	border-bottom: 1px solid grey;
-}
-.side-line .link-style .line-style-none{
-	border-bottom:0;
-}
-.side-line .link-style li a {
-	color:#988f5e;
-	font-weight: 700;
 }
 .footer {
 	clear : both;
@@ -251,7 +350,7 @@ h3 {
 	color: #7d775c;
 	font-style: italic;
 	font-family: georgia;
-	font-size: 18px;
+	font-size: 16.8px;
 	font-weight: normal;
 	letter-spacing: 1px;
 }
@@ -261,10 +360,18 @@ h3 {
 	color:#b7a5df;
 }
 .small-title {
-	position : fixed;
-	top : 1px;
-	left : 15px;
-	width : 51px;
-	font-size : 15px;
-	background-color : #d9d4be;
+	position : absolute;
+	top : 11px;
+	left : 12px;
+	width : 30px;
+	height :115px;
+	font-size : 20px;
+	line-height : 30px;
+	letter-spacing: 8px;
+	background-color : #bfbda8;
+	writing-mode : tb-rl;
+}
+
+.side-line .link-style .font-blur {
+	color : rgb(179,174,148);
 }
