@@ -473,6 +473,7 @@ h3 {
 	.side-line .link-style h3 {
 		display : inline-block;
 		margin: 7px;
+		font-size : 17px;
 		margin-right: 20px;
 		text-align: center;
 	}
