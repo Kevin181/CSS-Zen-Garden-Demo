@@ -206,6 +206,7 @@ h3 {
 		position: absolute;
 		top: 50px;
 		right: 0px;
+		padding-bottom : 20px;
 		width:145px;
 	}
 
@@ -219,7 +220,7 @@ h3 {
 		color: rgb(190,184,152);
 	    font: 11px georgia;
 	    letter-spacing: 1px;
-	    text-shadow : -1px -1px 1px #fff;
+	    text-shadow : -1px 1px 1px #fff;
 	}
 
 	.side-line .link-style li:before {
@@ -310,7 +311,7 @@ h3 {
 		left : 120px;
 		justify-content: center;
 		align-items: center;
-		height: 30px;
+		height: 60px;
 		margin :20px 0 0 40px; 
 		border: solid 1px #aaa;
 		box-shadow: 0 1px 2px rgba(0,0,0,.3);
@@ -327,7 +328,9 @@ h3 {
 
 	.side-line .link-style h3 {
 		display : inline-block;
-		margin: 7px 20px 0 0;
+		margin: 10px 20px 0 0;
+		font-size : 24px;
+		font-weight : bold;
 		text-align: center;
 	}
 
@@ -336,7 +339,7 @@ h3 {
 		position: relative;
 		top: -25px;
 		width: 100%;
-		height : 15px;
+		height : 30px;
 		padding: 5px 0;
 		border-radius: 5px;
 	}
@@ -346,15 +349,18 @@ h3 {
 	}
 
 	.side-line .link-style ul:hover {
-		top : 0;
+		top : 10px;
 		height : 110px;
 		text-align : left;
 	}
-	.side-line.link-style ul:hover li {
+	.side-line .link-style ul:hover li {
 		display: block;
-		width : 156px;
-		margin: 0 0 5px;
-		background: rgba(240,240,240,0.8);
+		width : 220px;
+		font-size : 22px;
+		line-height : 29px;
+		font-weight : bold;
+		margin: 0 0 15px;
+		background: rgba(200,200,200,1);
 	}
 
 	.footer {
@@ -553,7 +559,7 @@ h3 {
 	 .article:first-of-type  h3{
 		position: relative;
 		top: 10px;
-		left : -40px;
+		left : 0;
 		padding-bottom: 10px;
 	}
 
@@ -577,7 +583,7 @@ h3 {
 @media screen and (min-width: 1600px) {
 	.page-wrapper:before {
 	    position : absolute;
-	    top : 980px;
+	    top : 988px;
 	    right : 145px; 
 	    width : 400px;
 	    height : 1px;
@@ -587,7 +593,7 @@ h3 {
 
 	 .page-wrapper:after {
 	 	position : absolute;
-	    top : 680px;
+	    top : 688px;
 	    right : 145px;
 	    width : 1px;
 	    height : 300px;
@@ -602,7 +608,7 @@ h3 {
 	    left : 0;
 	    width :86.55%;
 	    margin :10px 150px 0 110px;
-	    height : 970px;
+	    height : 955px;
 	    content : "";
 	    z-index : -1;
 	    background-color : #fff;
@@ -610,6 +616,10 @@ h3 {
 	    	rgba(255,255,255,1)50%,rgba(255,255,255,1) 75%,rgba(255,255,255,0.8) 85%,rgba(255,255,255,0.7) 100%);
 	 	
 	 }
+
+	 .side-line .link-style:last-of-type ul {
+	    padding: 0 0 20px;
+	}
 
 }
  
