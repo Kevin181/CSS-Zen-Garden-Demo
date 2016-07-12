@@ -253,7 +253,7 @@ h3 {
 		font-weight: 700;
 	}
 
-@media screen and (device-aspect-ratio: 9/16) {
+@media screen and (max-width: 768px) {
 	body {
 		background-image: linear-gradient(45deg,#fff,#fff);
 	}
@@ -277,8 +277,8 @@ h3 {
 	}
 
 	.summary {
-		width: 100%;
-		margin-bottom : 0;
+		margin : 0;
+		width: 95%;
 		text-align: left;
 	}
 
@@ -288,49 +288,52 @@ h3 {
 	}
 
 	.content {
-	    padding-right: 10px;
+	    padding-right : 50px;
 	}
+
+	.side-line .link-style {
+		padding : 0;
+	    background-color: rgba(236,236,236,0.7);
+	}
+
 	.side-line {
 		position: absolute;
 		display: flex;
 		left :0px;
 		top : 0px;
-		justify-content: center;
+		justify-content: flex-end;
 		align-items: center;
+		flex-wrap : wrap;
 		width: 100%;
 		min-height: 60px;
 	}
 
 	.side-line div {
 		display: inline-block;
+		float : left;
 
 	}
 	.link-style {
 		display : flex;
 		position: relative;
-		left : 120px;
+		left : 0;
 		justify-content: center;
 		align-items: center;
-		height: 60px;
-		margin :20px 0 0 40px; 
-		border: solid 1px #aaa;
-		box-shadow: 0 1px 2px rgba(0,0,0,.3);
-		border-radius: 5px;
+		height: 30px;
+		margin: 5px 20px 5px 10px; 
+		border-radius: 6px;
 		background: #fff url("../image/menu.png") no-repeat 95% 50%;
 	}
 
 	.presentation-image {
-		position: absolute;
-		right: 0;
-		top: 0;
-		width : 140px;  
+		display : none;
 	}
 
 	.side-line .link-style h3 {
 		display : inline-block;
-		margin: 10px 20px 0 0;
-		font-size : 24px;
-		font-weight : bold;
+		margin: 5px 23px 5px 10px;
+		font-size : 17px;
+		margin-right: 20px;
 		text-align: center;
 	}
 
@@ -339,8 +342,8 @@ h3 {
 		position: relative;
 		top: -25px;
 		width: 100%;
-		height : 30px;
-		padding: 5px 0;
+		height : 25px;
+		padding:0;
 		border-radius: 5px;
 	}
 	.side-line .link-style li {
@@ -348,19 +351,22 @@ h3 {
 		margin: 0;
 	}
 
+	.side-line .link-style li::before {
+		background-image : none; 
+	}
+
 	.side-line .link-style ul:hover {
-		top : 10px;
-		height : 110px;
+		top : -30px;
+		height : 280px;
+		z-index : 3;
 		text-align : left;
+		background-color : rgba(236, 236, 236, 1);
+		border-radius : 6px;
 	}
 	.side-line .link-style ul:hover li {
 		display: block;
-		width : 220px;
-		font-size : 22px;
-		line-height : 29px;
-		font-weight : bold;
-		margin: 0 0 15px;
-		background: rgba(200,200,200,1);
+		width : 156px;
+		margin: 0 0 5px;
 	}
 
 	.footer {
@@ -394,145 +400,108 @@ h3 {
 
 }
 
-@media screen and (max-width: 768px) {
-	body {
-		background-image: linear-gradient(45deg,#fff,#fff);
+@media screen and (max-width: 600px) {
+	.page-wrapper {
+		background-image : none;
 	}
-
 	.header {
-		padding-top : 80px; 
+		display: flex;
+		flex-wrap : wrap;
+		margin-left : 20px;
+		padding-top : 10px;
 	}
 
 	.header h1 {
-		margin-top : 0;
+		min-width : 219px; 
 	}
-
 	.header h2 {
-	    position: absolute;
-	    right: 0;
-	    margin-right : 10px; 
+		margin-top : 10px;
 	}
-
 	.main {
-		margin-right : 0;
+		margin-left : 20px;
+		padding-top : 50px;
+	}
+	.small-title {
+		display : none;
 	}
 
-	.summary {
-		width: 100%;
-		margin-bottom : 0;
-		text-align: left;
+	.header h1::after {
+		left : 19px;
 	}
 
-	.summary p {
-		margin-bottom : 0;
-    	line-height: 15px;
+	.header:after {
+		left :19px;
 	}
 
-	.content {
-	    padding-right: 10px;
+	.footer::before {
+		display : none;
 	}
 
-	.side-line {
-		position: absolute;
-		display: flex;
-		left :0px;
-		top : 0px;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		min-height: 60px;
-	}
-
-	.side-line div {
-		display: inline-block;
-		float : left;
-
-	}
-	.link-style {
-		display : flex;
-		position: relative;
-		left : 0;
-		justify-content: center;
-		align-items: center;
-		height: 30px;
-		margin :20px 0 0 10px; 
-		border: solid 1px #aaa;
-		box-shadow: 0 1px 2px rgba(0,0,0,.3);
-		border-radius: 5px;
-		background: #fff url("../image/menu.png") no-repeat 95% 50%;
-	}
-
-	.presentation-image {
-		position: absolute;
-		/*float: right;*/
-		right: 0;
-		top: 0;
-		width : 140px;  
-	}
-
-	.side-line .link-style h3 {
-		display : inline-block;
-		margin: 7px;
-		font-size : 17px;
-		margin-right: 20px;
-		text-align: center;
-	}
-
-	.side-line .link-style ul {
-		display : inline-block;
-		position: relative;
-		top: -25px;
-		width: 100%;
-		height : 25px;
-		padding: 5px 0;
-		border-radius: 5px;
-	}
-	.side-line .link-style li {
-		display: none;
-		margin: 0;
-	}
-
-	.side-line .link-style ul:hover {
-		top : 0;
-		height : 300px;
-		text-align : left;
-	}
-	.side-line .link-style ul:hover li {
-		display: block;
-		width : 156px;
-		margin: 0 0 5px;
-		background: rgba(243,243,243,0.9);
+	.footer::after {
+		display : none;
 	}
 
 	.footer {
-		margin-right: 0;
-	}
-	.footer:before {
-		content: "";
-		display : inline-block;
-		position: absolute;
-		right: 0;
-		margin: 20px 5px 0 0;
-		width : 100%;
-		height : 1px;
-		background-image: linear-gradient(to left,rgba(200,200,200,1) 0%,
-			rgba(230,230,230,0.8) 20%,rgba(230,230,230,0.7) 30%,
-			rgba(230,230,230,0.5) 40%,rgba(230,230,230,0.1) 50%,#fff);  
+		margin : 0 48px 0 30px;
+		border-bottom : 1px solid #ccc;
+		border-right : 1px solid #ccc;
+		border-radius : 0 0 5px 0;
 	}
 
-	.footer:after {
-		content: "";
-		display : inline-block;
-		position: absolute;
-		right: 0;
-		margin: -280px 5px 0 0;
-		width : 1px;
-		height : 300px;
-		background-image: linear-gradient(to top,rgba(200,200,200,1) 0%,
-			rgba(230,230,230,0.9) 20%,rgba(230,230,230,0.8) 50%,
-			rgba(230,230,230,0.7) 60%,rgba(230,230,230,0.1) 70%,#fff);  
+	.side-line {
+		top : 90px;
 	}
 
+}
+
+@media screen and (max-width: 485px) {
+
+	.header h1::after {
+		left : 5px;
+	}
+
+	.header:after {
+		left :5px;
+	}
+
+	.main {
+		padding-top : 130px;
+	}
+
+	.side-line {
+		top : 120px;
+		justify-content: flex-start;
+	}
+
+}
+
+@media screen and (max-width: 380px) {
+	.content {
+		padding-right : 30px;
+	}
+
+}
+
+@media screen and (max-width: 280px) {
+
+	.main {
+		padding-top : 180px;
+	}
+
+	.header h1::after,.header:after {
+		display: none;
+	}
+
+	.side-line {
+		min-width : 200px;
+	}
+}
+
+@media screen and (max-width: 150px) {
+	.footer {
+		margin-left : 20px;
+		border-width : 0;
+	}
 }
 
 
