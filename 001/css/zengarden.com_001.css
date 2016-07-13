@@ -51,10 +51,7 @@ body {
 	background: transparent url("../image/zen-bg.jpg") no-repeat scroll left top;
 }
 .header {
-	margin-top : 10px;
-	margin-left : 110px;
-	margin-right : 150px;
-
+	margin: 10px 150px 15px 110px;
 	height : 106px;
 	background-clip: padding-box;
 	/*background: rgba(255,255,255,0.8);;*/
@@ -139,11 +136,7 @@ body {
 	font-size: 12px;
 	/*line-height: normal;*/
 }
-.article:first-of-type {
-	position: relative;
-	top: 10px;
-	left : 0px;
-}
+
 .presentation-image {
 	height: 110px;
 	background: url("../image/cr2.gif") no-repeat scroll left top;
@@ -324,6 +317,11 @@ h3 {
 		border-radius: 6px;
 		background: #fff url("../image/menu.png") no-repeat 95% 50%;
 	}
+	
+	.side-line .link-style:nth-of type(1) ul:hover {
+		height : 230px;width :400px;
+
+	}
 
 	.presentation-image {
 		display : none;
@@ -349,6 +347,7 @@ h3 {
 	.side-line .link-style li {
 		display: none;
 		margin: 0;
+		white-space: nowrap;
 	}
 
 	.side-line .link-style li::before {
@@ -359,14 +358,14 @@ h3 {
 		top : -30px;
 		height : 280px;
 		z-index : 3;
-		text-align : left;
+		text-align : center;
 		background-color : rgba(236, 236, 236, 1);
 		border-radius : 6px;
 	}
 	.side-line .link-style ul:hover li {
 		display: block;
 		width : 156px;
-		margin: 0 0 5px;
+		margin: 0 5px 5px;
 	}
 
 	.footer {
@@ -525,13 +524,6 @@ h3 {
 	    content:"";
 	    background: linear-gradient(to top, rgba(200,200,200,1), rgba(200,200,200,0));
 	 }
-
-	 .article:first-of-type  h3{
-		position: relative;
-		top: 10px;
-		left : 0;
-		padding-bottom: 10px;
-	}
 
 	.content:before {
 		float :left;
