@@ -455,14 +455,8 @@ h3 {
 	}
 
 	.header {
-		display: flex;
-		flex-wrap: wrap;
-		margin-left: 20px;
+		margin: 10px 0 0 20px;
 		padding-top: 10px;
-	}
-
-	.header h1 {
-		min-width: 219px; 
 	}
 
 	.header h2 {
@@ -474,28 +468,23 @@ h3 {
 		padding-top: 50px;
 	}
 
+	.content {
+	    padding-right: 20px;
+	}
+
 	.small-title {
 		display: none;
 	}
 
-	.header h1::after {
-		left: 19px;
-	}
-
-	.header:after {
-		left: 19px;
-	}
-
+	.header h1::after,
+	.header:after,
 	.footer::before,
 	.footer::after {
 		display: none;
 	}
 
 	.footer {
-		margin: 0 48px 0 30px;
-		border-bottom: 1px solid #ccc;
-		border-right: 1px solid #ccc;
-		border-radius: 0 0 5px 0;
+		margin: 0 48px 0 20px;
 	}
 
 	.side-line {
@@ -531,12 +520,16 @@ h3 {
 		left: 5px;
 	}
 
+	.header h2 {
+		margin-top: 100px;
+	}
+
 	.main {
-		padding-top: 120px;
+		padding-top: 140px;
 	}
 
 	.side-line {
-		top: 145px;
+		top: 150px;
 	}
 
 	.side-line div {
