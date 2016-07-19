@@ -1,16 +1,91 @@
-body {
-	margin: 0;
-	padding: 0; 
-	color: #555753;
+$bloosoms-img: url("../image/blossoms.jpg");
+$zen-bg-img: url("../image/zen-bg.jpg");
+$h1-img: url("../image/h1.gif");
+$cr2-img: url("../image/cr2.gif");
+$menu-img: url("../image/menu.png");
+
+$direction: (t: top,
+			 r: right,
+			 b: bottom,
+			 l:left,
+			 tl: top left,
+			 tr: top right,
+			 bl: bottom left,
+			 br: bottom right,
+			 135deg: 135deg);
+
+$repeat-style:(nr: no-repeat,
+			   rx:repeat-x,
+			   ry:repeat-y);
+
+$grey:(alpha-1: rgba(200,200,200,1),
+	   alpha-0: rgba(200,200,200,0),
+	   alpha-00: rgba(180,180,180,0),
+	   alpha-06: rgba(180,180,180,0.6),
+	   alpha-08: rgba(180,180,180,0.8),
+	   alpha-10: rgba(180,180,180,1));
+
+$white:(alpha-1: rgba(255,255,255,1),
+	   alpha-0: rgba(255,255,255,0),
+	   alpha-00: rgba(255,255,255,0),
+	   alpha-07: rgba(255,255,255,0.7),
+	   alpha-08: rgba(255,255,255,0.8),
+	   alpha-10: rgba(255,255,255,1));
+
+$to-zero: (margin: 0,
+		   padding: 0);
+
+$body-font-color: #555753;
+$a-font-color: #b7a5df;
+$special-font-color: #b7a5df;
+
+@mixin gradient($direction,$color...) {
+		background: linear-gradient(to $direction, $color);
+}
+
+@mixin position-style($left,$width,$height) {
+		left: $left;
+		width: $width;
+		height: $height;
+}
+
+@mixin max-screen($res){
+  @media only screen and ( max-width: $res )
+  {
+    @content;
+  }
+}
+
+@mixin min-screen($res){
+  @media only screen and ( min-width: $res )
+  {
+    @content;
+  }
+}
+
+
+body { 
+	@each $style, $size in $to-zero {
+  		#{$style}: $size;
+	}
+	color: $body-font-color;
 	font-size: 12px;
 	font-family: georgia,​sans-serif;
 	line-height: 1.9em;
-	background: #fff url("../image/blossoms.jpg") no-repeat right bottom;
+	background: #fff $bloosoms-img map-get($repeat-style,nr) map-get($direction,br);
 }
 
 .page-wrapper {
 	margin: 0 0 20px 0;
-	background: transparent url("../image/zen-bg.jpg") no-repeat left top;
+	background: transparent $zen-bg-img map-get($repeat-style,nr) map-get($direction,tl);
+
+	&:before {
+	    top: 688px;
+	    right: 145px;
+	    width: 1px;
+	    height: 300px;
+	    @include gradient(map-get($direction,t),map-get($grey,alpha-1),map-get($grey,alpha-0));
+	}
 }
 
 .header {
@@ -26,17 +101,13 @@ body {
 	}
 
 	&:after {
-		left: 102px;
-		width: 400px;
-		height: 1px;
-		background: linear-gradient(to right, rgba(200,200,200,1), rgba(200,200,200,0));
+		@include position-style(102px,400px,1px);
+		@include gradient(map-get($direction,r),map-get($grey,alpha-1),map-get($grey,alpha-0));
 	}
 
 	h1:after {
-		left: 102px;
-		width: 1px;
-		height: 300px;
-		background: linear-gradient(to bottom, rgba(200,200,200,1), rgba(200,200,200,0));
+		@include position-style(102px,1px,300px);
+		@include gradient(map-get($direction,b),map-get($grey,alpha-0),map-get($grey,alpha-1));
 	}
 
 	h1 {
@@ -50,7 +121,7 @@ body {
 		font-weight: lighter;
 		line-height: 76%;//行间距
 		white-space: nowrap;
-		background: transparent url("../image/h1.gif") no-repeat top left;
+		background: transparent $h1-img map-get($repeat-style,nr) map-get($direction,tl);
 		overflow: hidden;
 	}
 
@@ -96,6 +167,17 @@ body {
 		line-height: 22.667px;
 	}
 
+	&:before {
+	    top: 0;
+	    @include position-style(0,86.55%,955px);
+	    float: left;
+	    margin: 10px 150px 0 110px;
+	    z-index: -1;
+	    background-color: #fff;
+	    @include gradient(map-get($direction,135deg),map-get($white,alpha-07) 0%,map-get($white,alpha-08) 10%,map-get($white,alpha-10) 24%,
+		map-get($white,alpha-10) 50%,map-get($white,alpha-10) 75%,map-get($white,alpha-08) 85%,map-get($white,alpha-07) 100%);
+	}
+
 }
 
 .article {
@@ -104,7 +186,7 @@ body {
 
 .presentation-image {
 	height: 110px;
-	background: url("../image/cr2.gif") no-repeat scroll left top;
+	background: $cr2-img map-get($repeat-style,nr) map-get($direction,tl);
 }
 
 .footer {
@@ -121,7 +203,7 @@ body {
 }
 
 a {
-	color: #b7a5df;
+	color: $a-font-color;
     font-weight: bold;
     text-decoration: none;
 
@@ -148,16 +230,14 @@ h3 {
 	&:hover,
 	&:focus,
 	&:active {
-		color: #b7a5df;
+		color: $special-font-color;
 	}
 }
 
 .small-title {
 	position: absolute;
 	top: 11px;
-	left: 12px;
-	width: 30px;
-	height:115px;
+	@include position-style(12px,30px,115px);
 	font-size: 20px;
 	line-height: 30px;
 	letter-spacing: 8px;
@@ -201,14 +281,15 @@ h3 {
     	margin: 5px 0 5px -10px;
     	width: 145px;
     	height: 1px;
-    	background-image: linear-gradient(to right, rgba(30,30,30,0) 0%,rgba(180,180,180,0.6) 20%,
-    		rgba(180,180,180,0.8) 30%,rgba(180,180,180,1) 40%,rgba(180,180,180,1) 60%,rgba(180,180,180,0.8) 70%,
-    		rgba(180,180,180,0.6) 80%,rgba(30,30,30,0) 100%);
+    	@include gradient(map-get($direction,r),map-get($grey,alpha-00) 0%,map-get($grey,alpha-06) 20%,map-get($grey,alpha-08) 30%,
+    		map-get($grey,alpha-10) 40%,map-get($grey,alpha-10) 60%,map-get($grey,alpha-08) 70%,map-get($grey,alpha-06) 80%,
+    		map-get($grey,alpha-00) 100%);
     }
 
     ul {
-    	margin: 0;
-    	padding: 0;
+    	@each $style, $size in $to-zero {
+  			#{$style}: $size;
+		}
     }
 
     li {
@@ -230,11 +311,9 @@ h3 {
     	    padding: 0 0 20px;
     	}
     }
-
-
 }
 
-@media screen and (min-width: 1600px) {
+@include min-screen(1600px) {
 	body {
 		height: 990px;
 	}
@@ -247,80 +326,39 @@ h3 {
 		}
 	}
 
-	.page-wrapper {
-		&:before {
-		    top: 688px;
-		    right: 145px;
-		    width: 1px;
-		    height: 300px;
-		    background: linear-gradient(to top, rgba(200,200,200,1), rgba(200,200,200,0));
-		}
-	}
-
-	.content {
-		&:before {
-		    top: 0;
-		    left: 0;
-		    float: left;
-		    width: 86.55%;
-		    margin: 10px 150px 0 110px;
-		    height: 955px;
-		    z-index: -1;
-		    background-color: #fff;
-		    background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.8)10%,rgba(255,255,255,1)24%,
-		    	rgba(255,255,255,1)50%,rgba(255,255,255,1) 75%,rgba(255,255,255,0.8) 85%,rgba(255,255,255,0.7) 100%);
-		}
-	 	
-	}
-
 	.link-style:last-of-type ul {
 	    padding: 0 0 20px;
 	}
 }
 
-@media screen and (min-width: 1200px) {
-	@mixin gradient($direction) {
-		background: linear-gradient(to $direction, rgba(200,200,200,1), rgba(200,200,200,0));
-	}
+@include min-screen(1200px) {
 
-	.page-wrapper:before {
+	.page-wrapper {
 		&:before {
 		    top: 1110px;
 		    right: 150px; 
 		    width: 400px;
 		    height: 1px;
-		    @include gradient(left);
+		    @include gradient(map-get($direction,l),map-get($grey,alpha-1),map-get($grey,alpha-0));
 	    }
 
 	    &:after {
-	    	    top: 810px;
-	    	    right: 145px;
-	    	    width: 1px;
-	    	    height: 300px;
-	    	    @include gradient(top);
+	    	top: 810px;
 	    }
 	}
 
 	.content {
 		&:before{
-		    top: 0;
-		    left: 0;
-		    float: left;
 		    width: 81%;
-		    margin: 10px 150px 0 110px;
 		    height: 1020px;
-		    z-index: -1;
-		    background-color: #fff;
-		    background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.8)10%,rgba(255,255,255,1)24%,
-		    	rgba(255,255,255,1)50%,rgba(255,255,255,1) 75%,rgba(255,255,255,0.8) 85%,rgba(255,255,255,0.7) 100%);
 		}
 	 	
 	}
 }
 
-@media screen and (max-width: 768px) {
+@include max-screen(768px) {
 	body {
-		background-image: linear-gradient(45deg,#fff,#fff);
+		@include gradient(45deg,map-get($white,alpha-1),map-get($white,alpha-1));
 	}
 
 	.header {
@@ -379,14 +417,12 @@ h3 {
 
 	.link-style {
 		position: relative;
-		left: 0;
+		@include position-style(0,160px,30px);
 		margin: 5px 0 5px 9px; 
 		padding: 0;
-		height: 30px;
-		width: 160px;
 		text-align: center;
 		border-radius: 6px;
-		background: rgba(236,236,236,0.7) url("../image/menu.png") no-repeat 95% 50%;
+		background: rgba(236,236,236,0.7) $menu-img map-get($repeat-style,nr) 95% 50%;
 
 		h3 {
 			display: inline-block;
@@ -440,13 +476,6 @@ h3 {
 	div.link-style:nth-child(4) ul:hover {
 		height: 145px;
 	}
-
-	@mixin gradient($direction) {
-		background-image: linear-gradient(to $direction,rgba(200,200,200,1) 0%,
-			rgba(230,230,230,0.8) 20%,rgba(230,230,230,0.7) 30%,
-			rgba(230,230,230,0.5) 40%,rgba(230,230,230,0.1) 50%,#fff);
-
-	}
 	
 	.footer {
 		margin-right: 0;
@@ -463,14 +492,14 @@ h3 {
 			margin: 20px 5px 0 0;
 			width: 100%;
 			height: 1px;
-			@include gradient(left); 
+			@include gradient(left,map-get($white,alpha-1),map-get($white,alpha-1)); 
 		}
 
 		&:after {
 			margin: -280px 5px 0 0;
 			width: 1px;
 			height: 300px;
-			@include gradient(top);  
+			@include gradient(top,map-get($white,alpha-1),map-get($white,alpha-1));  
 		}
 
 
@@ -478,13 +507,9 @@ h3 {
 
 }
 
-@media screen and (max-width: 640px) {
+@include max-screen(640px) {
 	.page-wrapper {
 		background-image : none;
-	}
-
-	%vanish {
-		display: none;
 	}
 
 	.header {
@@ -510,7 +535,10 @@ h3 {
 		padding-top: 50px;
 	}
 
-
+	%vanish {
+		display: none;
+	}
+	
 	.content {
 	    padding-right: 30px;
 	}
@@ -532,16 +560,6 @@ h3 {
 		left: 20px;
 		width:440px;
 
-		.link-style {
-			h3 {
-				font-size: 14px;
-			}
-
-			ul:hover li {
-				width: 120px;
-			}
-		}
-
 		div {
 			&:nth-child(2) {
 				width: 150px;
@@ -554,11 +572,21 @@ h3 {
 
 	.link-style {
 		width: 130px;
+
+		h3 {
+			font-size: 14px;
+		}
+
+		ul {
+			&:hover li {
+				width: 120px;
+			}
+		}
 	}
 
 }
 
-@media screen and (max-width: 480px) {
+@include max-screen(480px) {
 	.header {
 		h1::after,
 		&:after {
@@ -582,22 +610,22 @@ h3 {
 			display: block;
 			float: none;
 		}
-
-		.link-style {
-			ul:hover li {
-				width: 140px;
-			}
-		}
 	}
 
 	.link-style {
 		margin-bottom: 10px;
 		width: 150px;
+
+		ul {
+			&:hover li {
+				width: 140px;
+			}
+		}
 	}
 
 }
 
-@media screen and (max-width: 320px) {
+@include max-screen(320px) {
 	.content {
 		padding-right: 30px;
 	}
