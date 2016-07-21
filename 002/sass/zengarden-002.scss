@@ -1,12 +1,29 @@
+$h1-img: url("../image/h1.gif");
+$introduce-img: url("../image/splash.png");
+$direction-l: left;
+$direction-r: right;
+$direction-t: top;
+$direction-b: bottom;
+$direction-tl: top left;
+$direction-tr: top right;
+$direction-bl: bottom left;
+$direction-br: bottom right;
+$color-transparent: transparent;
+$repeat-n: no-repeat;
+
+@mixin background-color($color) {
+	background-color: $color;
+}
+
 body {
 	margin: 0;
 	padding: 0;
-	color: #AD7C77;
-	background-color: #FFD7C4;
+	color: #ad7c77;
+	@include background-color(#ffd7c4);
 }
 
 a {
-	color: #E98376;
+	color: #e98376;
 	font-family: verdana,sans-serif;
 	font-weight: bold;
 	text-decoration: none;
@@ -37,13 +54,13 @@ h3 {
 
 .page-wrapper {
 	&:before {
+		content:"";
 		position: absolute;
 		top: 62px;
 		left: 0;
 		height: 5px;
 		width: 100%;
-		content:"";
-		background-color: rgba(125,125,125,0.3);
+		@include background-color(rgba(125,125,125,0.3));
 	}
 }
 
@@ -56,8 +73,8 @@ h3 {
 		margin: 0;
 		width: 258px; 
 		height: 62px;
-		color: transparent;
-		background: #fff url("../image/h1.gif") no-repeat top left; 
+		color: $color-transparent;
+		background: #fff $h1-img $repeat-n $direction-tl; 
 	}
 
 	h2 {
@@ -85,7 +102,7 @@ h3 {
 .content {
 	margin: 0 0 0 220px;
 	padding-top: 30px; 
-	background-color: #FFC5A9;
+	@include background-color(#ffc5a9);
 
 	p {
 		text-align: justify;
@@ -96,8 +113,8 @@ h3 {
 	margin: 30px 15px 0 40px;
 	padding: 0 0 0 20px;
 	height: 180px;
-	border: 1px solid #FFBEA1;
-	background-color: #FFD7C4;
+	border: 1px solid #ffbea1;
+	@include background-color(#ffd7c4);
 
 	a {
 		color: #b27f66;
@@ -128,7 +145,7 @@ h3 {
 	height: 182px;
 	color: #fff;
 	font-size: 14px;
-	background: transparent  url("../image/splash.png") no-repeat top left;
+	background: $color-transparent  $introduce-img $repeat-n $direction-tl;
 	border: 4px solid #fff;
 	box-shadow: 1px 1px 2px #ccc;
 }
@@ -184,7 +201,7 @@ h3 {
 .contentInfo {
 	margin: 0 20px 0 40px;
 	padding-bottom: 10px;
-	border-bottom: 1px solid #FFCDB5;
+	border-bottom: 1px solid #ffcdb5;
 	font-size: 11px;
 }
 
@@ -200,7 +217,7 @@ h3 {
 	
 		&:hover,
 		&:active {
-			background-color: #FFD7BF; 
+			@include background-color(#ffd7bf); 
 			font-weight: bold;
 			text-decoration: none;
 		}
@@ -234,7 +251,7 @@ h3 {
 	margin: 0 20px 0 0;
 	font-weight: 700;
 	text-align: center;
-	background-color: #FFD7C4;
+	@include background-color(#ffd7c4);
 }
 
 .link-style {
@@ -266,7 +283,7 @@ h3 {
 	font-size: 10px;
 	font-weight: 700;
 	border: 4px solid #fff;
-	background: transparent  url("../image/splash.png") no-repeat bottom right;
+	background: $color-transparent  $introduce-img $repeat-n $direction-br;
 
 	span {
 		position: relative;
@@ -303,7 +320,7 @@ a.special-color {
 
 @media (max-width: 768px) {
 	body {
-		background-color: #ffc5a9;
+		@include background-color(#ffc5a9);
 	}
 
 	.header {
@@ -333,7 +350,7 @@ a.special-color {
 		margin: 0 0 50px 0;
 		padding: 0;
 		border-width:  0;
-		background-color: transparent;
+		@include background-color($color-transparent);
 		p {
 			&:last-child {
 			    font-size: 10px;
@@ -380,13 +397,13 @@ a.special-color {
 		left: 1em;
 		top: 35px;
 		width: 100%;
-		background-color: transparent; 
+		@include background-color($color-transparent);
 
 		div {
 			display: inline-block;
 			float: left;
 			margin:0 10px 10px 0;
-			background-color: rgba(248,248,248,1);
+			@include background-color(rgba(248,248,248,1));
 		}
 
 		.link-style {
@@ -395,7 +412,7 @@ a.special-color {
 				margin-top: 0;
 				text-align: center;
 				font-size: 14px;
-				background-color: transparent;
+				@include background-color($color-transparent);
 			}
 		}
 
@@ -412,7 +429,7 @@ a.special-color {
 		div {
 			width: 160px;
 			text-align: center;
-			background-color: transparent;
+			@include background-color($color-transparent);
 		}
 
 		nav {

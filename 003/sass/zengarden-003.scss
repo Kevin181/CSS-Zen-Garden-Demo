@@ -1,3 +1,36 @@
+$header-img: url("../image/header.png");
+$first-img: url("../image/wallpaper.jpg");
+$proverb: storm weather by dave shea;
+$direction-tl: top left;
+$direction-tr: top right;
+$direction-bl: bottom left;
+$direction-br: bottom right;
+$repeat-r: repeat;
+$repeat-n: no-repeat;
+
+%disappear {
+	color: transparent;
+}
+
+%image-font-style {
+	position: relative;
+	display: inline-block;
+ 	margin: 0;
+ 	line-height: normal;
+}
+
+@mixin first-image-font($top,$left,$font,$color) {
+	top: $top;
+	left: $left;
+	font-size: $font;
+	color: $color;
+}
+
+@mixin marginstyle($left,$right) {
+	margin-left: $left;
+	margin-right: $right;
+}
+
 body {
 		margin: 0;
 		padding: 0;
@@ -34,12 +67,12 @@ abbr {
 	left: -7px;
 	width: 101.5%;
 	height: 8.5em;
-	background: transparent url("../image/header.png") repeat top left;
+	background: transparent $header-img $repeat-r $direction-tl;
 	opacity: 0.8;
 	box-shadow: 0 3px 4px #444;
 
 	&:before {
-		content: "storm weather by dave shea";
+		content: "$proverb";
 		position: absolute;
 		left: 13%;
 		top: 82em;
@@ -89,10 +122,6 @@ abbr {
 	}
 }
 
-%disappear {
-	color: transparent;
-}
-
 .introduce {
 	height: 290px;
 
@@ -130,30 +159,15 @@ abbr {
 	}
 }
 
-
-%image-font-style {
-	position: relative;
-	display: inline-block;
- 	margin: 0;
- 	line-height: normal;
-}
-
 .first-image {
 	float: left;
 	margin: 4.5em 0 0 3em;
-	background: transparent url("../image/wallpaper.jpg") no-repeat top left;
+	background: transparent $first-img $repeat-n $direction-tl;
 
 	.expand,
 	.normal,
 	.extra-expand {
 		@extend %image-font-style;
-	}
-
-	@mixin first-image-font($top,$left,$font,$color) {
-		top: $top;
-		left: $left;
-		font-size: $font;
-		color: $color;
 	}
 
 	.expand {
@@ -173,7 +187,7 @@ abbr {
 .second-image {
 	margin-top: 4.45em;
 	margin-left: 1em;
-	background: transparent url("../image/wallpaper.jpg") no-repeat top right;
+	background: transparent $first-img $repeat-n $direction-tr;
 
 	.expand,
 	.extra-expand,
@@ -206,7 +220,7 @@ abbr {
 .third-image {
 	float: right;
 	margin: 4.5em 3em 0 1em;
-	background: transparent url("../image/wallpaper.jpg") no-repeat bottom left;
+	background: transparent $first-img $repeat-n $direction-bl;
 }
 
 .article {
@@ -336,7 +350,7 @@ abbr {
 		width: 72%;
 		margin-left: 14%;
 		margin-right: 14%;
-		background-color: #849AA9;
+		background-color: #849aa9;
 	}
 
 	.header {
@@ -386,6 +400,11 @@ abbr {
 }
 
 @media screen and (max-width:768px) {
+	%link-style-same {
+		width: 96%;
+		margin-left: 2%;
+	}
+
 	.page-wrapper {
 		width: 80%;
 		margin-left: 10%;
@@ -393,13 +412,8 @@ abbr {
 	}
 
 	.header {
-		position: relative;
 		left: -2px;
-		width: 101.5%;
-		height: 8.5em;
 		text-align: center;
-		background: transparent url("../image/header.png") repeat top left;
-		box-shadow: 0 3px 4px #444;
 
 		&:before,
 		&:after {
@@ -465,11 +479,6 @@ abbr {
 		width: 96%;
 	}
 
-	%link-style-same {
-		width: 96%;
-		margin-left: 2%;
-	}
-
 	.link-style {
 		@extend %link-style-same;
 
@@ -515,6 +524,10 @@ abbr {
 }
 
 @media screen and (max-width: 640px) {
+	%margin-style {
+		margin-left: 0;
+		margin-right: 2%;
+	}
 
 	.header {
 		 h1 {
@@ -533,11 +546,6 @@ abbr {
 		.extra-expand {
 			left: -0.5em;
 		}
-	}
-
-	%margin-style {
-		margin-left: 0;
-		margin-right: 2%;
 	}
 
 	.second-image,
@@ -575,11 +583,6 @@ abbr {
 }
 
 @media screen and (max-width: 320px) {
-	@mixin marginstyle($left,$right) {
-		margin-left: $left;
-		margin-right: $right;
-	}
-
 	.page-wrapper {
 		width: 90%;
 		@include marginstyle(5%,5%);
