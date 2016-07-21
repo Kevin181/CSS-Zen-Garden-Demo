@@ -22,9 +22,8 @@ abbr {
 }
 
 .page-wrapper {
-	width: 60%;
-	margin-left: 20%;
-	margin-right: 20%;
+	width: 750px;
+	margin: 0 auto;
 	background-color: #849AA9;
 }
 
@@ -42,7 +41,7 @@ abbr {
 	content: "storm weather by dave shea";
 	position: absolute;
 	left: 13%;
-	top: 82em;
+	top: 80em;
 	padding-top: 6px;
 	width: 9em;
 	height: 3em;
@@ -103,9 +102,9 @@ abbr {
 
 .introduce-img {
 	display: inline-block;
-	margin: 0 0 0 1em;
+	margin: 0;
 	padding: 1px;
-	width: 15.83em;
+	width: 25%;
 	height: 15.6em;
 	line-height: 0;
 	border: 1.5em solid #fff;
@@ -120,7 +119,7 @@ abbr {
 
 .first-image {
 	float: left;
-	margin: 4.5em 0 0 3em;
+	margin: 4.5em 0 0 1em;
 	background: transparent url("../image/wallpaper.jpg") no-repeat top left;
 }
 
@@ -160,7 +159,7 @@ abbr {
 .second-image {
 	margin-top: 4.45em;
 	margin-left: 1em;
-	background: transparent url("../image/wallpaper.jpg") no-repeat top right;
+	background: transparent url("../image/wallpaper.jpg") repeat-x top right;
 }
 
 .second-image .expand {
@@ -184,15 +183,15 @@ abbr {
 
 .third-image {
 	float: right;
-	margin: 4.5em 3em 0 0;
+	margin: 4.5em 1em 0 0;
 	margin-left: 1em;
-	background: transparent url("../image/wallpaper.jpg") no-repeat bottom left;
+	background: transparent url("../image/wallpaper.jpg") repeat-x bottom left;
 }
 
 .article {
 	display: inline-block;
-	width: 58%;
-	margin-left: 32%;
+	width: 450px;
+	margin-left: 246px;
 	text-align: left;
 }
 
@@ -209,9 +208,8 @@ abbr {
 .article:first-of-type {
 	position: absolute;
 	top: 32.5em;
-	left: 20%;
-	margin-left: 2.8em;
-	width: 16%;
+	margin-left: 0.5em;
+	width: 210px;
 }
 
 .article:first-of-type p {
@@ -310,62 +308,9 @@ abbr {
 	list-style-type: none;
 }
 
-@media screen and (max-width:1300px) {
-	.page-wrapper {
-		width: 72%;
-		margin-left: 14%;
-		margin-right: 14%;
-		background-color: #849AA9;
-	}
-
-	.header:before {
-		top: 105em;
-	}
-
-	.article:first-of-type {
-		left: 15%;
-	}
-
-	.second-image {
-		float: right;
-		margin: 4.45em 3em 0 1em;
-	}
-
-	.link-style:first-of-type {
-		position: static;
-		width: 60%;
-		margin-top: 15px;
-		margin-bottom: 25px;
-	}
-
-	.link-style:first-of-type ul {
-		position: static;
-		width: 100%;
-		height: 30px;
-	}
-
-	.link-style:first-of-type li {
-		margin: 0 15px 15px 0;
-	}
-
-	.side-line {
-		padding-bottom: 20px;
-		margin-bottom: 10px;
-
-	}
-
-	.link-style {
-		text-align: left;
-	}
-	
-
-}
-
 @media screen and (max-width:768px) {
 	.page-wrapper {
-		width: 80%;
-		margin-left: 10%;
-		margin-right: 10%;
+		width: 100%;
 	}
 
 	.header {
@@ -401,7 +346,8 @@ abbr {
 	}
 
 	.introduce {
-		height: 490px;
+		width: 100%;
+		height: 460px;
 	}
 
 	.introduce p:last-of-type a {
@@ -410,26 +356,51 @@ abbr {
 
 	.introduce-img {
 		display: inline-block; 
-		width: 190px;
+		width: 42%;
 		height: 15.6em;
-		margin: 1em 1em 0 1em;
-		border: 1.5em solid #fff;
+		margin: 2em 2em 0;
+		border: 0.5em solid #fff;
 		box-shadow: 0 3px 4px #666;
 	}
 
+	.first-image {
+		margin-right: 0;
+	}
+
+	.first-image .normal {
+	    left: 0;
+	    top: 4em;
+	}
+
+	.first-image .extra-expand {
+	    left: 0;
+	}
+
 	.second-image {
-		margin-left: 0;
+		float: right;
+		margin: 2em 2em 0 0;
+	}
+
+	.second-image .extra-expand {
+	    left: -2.5em;
+	    top: 4.5em;
+	}
+
+	.third-image {
+		float: none;
+		margin: 2em auto;
+		width: 92%;
 	}
 
 	.article {
 		margin: 0;
-		width: 96%;
+		width: 93%;
 	}
 	
 	.article:first-of-type {
 		position: static;
 		margin: 0;
-		width: 96%;
+		width: 93%;
 	}
 
 	.contentInfo {
@@ -480,34 +451,18 @@ abbr {
 }
 
 @media screen and (max-width: 640px) {
-
-	.header h1 {
-		margin: 1.2em 0 0 0;
-		font-size: 2em;
+	.first-image {
+		margin-left: 1.5em;
 	}
 
-	.introduce-img {
-		display: block;
-		margin: 2em 0 0 2%;
-		width: 88%;
+	.second-image {
+		margin-right: 1.5em;
 	}
 
-	.first-image .extra-expand {
-		left: -0.5em;
-	}
-
-	.second-image,
 	.third-image {
-		margin-left: 0;
-		margin-right: 2%;
-	}
-
-	.introduce {
-		height: 755px;
-	}
-
-	.link-style:first-of-type {
-		margin-bottom: 40px;
+		float: none;
+		margin: 2em auto;
+		width: 92%;
 	}
 }
 
