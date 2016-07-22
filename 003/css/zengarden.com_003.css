@@ -67,7 +67,7 @@ abbr {
 .header h1 {
 	display: inline-block;
 	float: left;
-	margin: 0.5em 0 0 1em;
+	margin: 0.5em 0 0 30px;
 	width: 9em;
 	text-align: center;
 	color: rgba(255,255,255,1);
@@ -77,7 +77,7 @@ abbr {
 }
 
 .header h2 {
-	margin: 0 0 0 4em;
+	margin: 0 0 0 30px;
 	width: 324px;
 	text-align: center;
 	color: rgba(233,243,234,1);
@@ -159,7 +159,7 @@ abbr {
 .second-image {
 	margin-top: 4.45em;
 	margin-left: 1em;
-	background: transparent url("../image/wallpaper.jpg") repeat-x top right;
+	background: transparent url("../image/wallpaper.jpg") no-repeat top right;
 }
 
 .second-image .expand {
@@ -185,7 +185,7 @@ abbr {
 	float: right;
 	margin: 4.5em 1em 0 0;
 	margin-left: 1em;
-	background: transparent url("../image/wallpaper.jpg") repeat-x bottom left;
+	background: transparent url("../image/wallpaper.jpg") no-repeat bottom left;
 }
 
 .article {
@@ -256,7 +256,7 @@ abbr {
 .link-style:first-of-type {
 	position: absolute;
 	top: 1.5em;
-	left: 14.6%;
+	margin-left: 360px;
 	width: 25%;
 	color: grey;
 	font-weight: normal;
@@ -330,24 +330,20 @@ abbr {
 
 	.header h1 {
 		float: none;
+		display: inline-block;
+		text-align: center;
 		margin: 0.5em  0 0 0;
 	}
 
 	.header h2 {
-		margin-left: 0;
 		width: auto;
 		text-align: center;
-		color: rgba(233,243,234,1);
-		font-size: 9px;
-		font-weight: lighter;
-		font-style: italic;
-		text-transform: lowercase;
 		border-bottom: 0 double rgba(255,255,255,0.8);
 	}
 
 	.introduce {
 		width: 100%;
-		height: 460px;
+		height: 440px;
 	}
 
 	.introduce p:last-of-type a {
@@ -356,15 +352,18 @@ abbr {
 
 	.introduce-img {
 		display: inline-block; 
-		width: 42%;
+		padding: 0;
+		width: 47%;
 		height: 15.6em;
-		margin: 2em 2em 0;
-		border: 0.5em solid #fff;
+		margin: 2em 1.5%;
+		background-clip: border-box;
+		background-size: cover;
+		border: 0;
 		box-shadow: 0 3px 4px #666;
 	}
 
 	.first-image {
-		margin-right: 0;
+		margin: 2em 0 0 1.5%;
 	}
 
 	.first-image .normal {
@@ -378,7 +377,7 @@ abbr {
 
 	.second-image {
 		float: right;
-		margin: 2em 2em 0 0;
+		margin: 2em 1.5% 0 0;
 	}
 
 	.second-image .extra-expand {
@@ -389,7 +388,7 @@ abbr {
 	.third-image {
 		float: none;
 		margin: 2em auto;
-		width: 92%;
+		width: 97%;
 	}
 
 	.article {
@@ -408,10 +407,19 @@ abbr {
 		width: 96%;
 	}
 
+	.side-line {
+		padding-bottom: 30px;
+	}
+
 	.link-style,
 	.link-style:first-of-type {
 		width: 96%;
+		margin-top: 1em;
 		margin-left: 2%;
+	}
+
+	.link-style:first-of-type {
+		position: static;
 	}
 
 	.link-style h3 {
@@ -452,67 +460,55 @@ abbr {
 
 @media screen and (max-width: 640px) {
 	.first-image {
-		margin-left: 1.5em;
+		margin-top: 1em;
 	}
 
 	.second-image {
-		margin-right: 1.5em;
+		margin-top: 1em;
 	}
 
 	.third-image {
-		float: none;
-		margin: 2em auto;
-		width: 92%;
+		margin: 1em 1.5% 2em 1.5%;
+	}
+
+	.introduce {
+		height: 400px;
 	}
 }
 
 @media screen and (max-width: 480px) {
-	.introduce-img {
-		width: 85%;
+	.header h1 {
+		font-size: 2em;
+	}
+	
+	.first-image,
+	.second-image {
+		float: none;
+		display: block;
+		width: 95%;
+		margin: 1em auto;
 	}
 
-	.link-style:first-of-type {
-		margin-bottom: 50px;
-	}
-
-	.first-image .normal {
-		left: 0;
-	}
-}
-
-@media screen and (max-width: 320px) {
-	.page-wrapper {
-		width: 90%;
-		margin-left: 5%;
-		margin-right: 5%;
-		background-color: #849AA9;
-	}
-
-	.header {
-		margin: 0;
-		width: 100%;
-	}
-
-	.header:before {
+	.third-image {
 		display: none;
 	}
 
-	.header h1 {
-		margin-left: 5px;
+	.introduce {
+		display: block;
+		height: 390px;
 	}
 
-	.header h2 {
-		left: 0;
-		margin-left: 5px;
+	.link-style:first-of-type ul {
+		width: 100%;
+		height: auto;
 	}
+	
+}
 
+@media screen and (max-width: 320px) {
 	.introduce-img {
-		margin-left: 0;
-		margin-right: 0;
-	}
-
-	.link-style:first-of-type {
-		margin-bottom: 60px;
+		margin: 1em 3.5%;
+		width: 93%;
 	}
 }
 
