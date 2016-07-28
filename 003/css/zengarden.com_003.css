@@ -1,8 +1,7 @@
 body {
 		margin: 0;
 		padding: 0;
-		font: 75% georgia;
-	    text-align: center;
+		font-family: georgia;
 	    color: #fff;
 	    background-color: #748A9B ;
 }
@@ -89,19 +88,12 @@ abbr {
 }
 
 .introduce {
-	height: 290px;
-}
-
-.introduce .third-image p:last-of-type {
-	color: transparent; 
-}
-
-.introduce p:last-of-type a {
-	color: transparent; 
+	box-sizing: border-box;
+	margin: 55px 0;
 }
 
 .introduce-img {
-	display: inline-block;
+	/*display: inline-block;
 	margin: 0;
 	padding: 1px;
 	width: 25%;
@@ -110,88 +102,80 @@ abbr {
 	border: 1.5em solid #fff;
 	background-clip: padding-box;
 	box-shadow: 0 3px 4px #666;
-	opacity: 0.7;
-}
-
-.introduce-img p {
-	line-height: 0;
-}
-
-.first-image {
+	opacity: 0.7;*/
 	float: left;
-	margin: 4.5em 0 0 1em;
-	background: transparent url("../image/wallpaper.jpg") no-repeat top left;
+	padding: 20px;
+	width: 33.333%;
+	height: 211px;
+	border-width: 0 30px;
+	border-style: solid;
+	border-color: transparent; 
+	background-image: url("../image/wallpaper.jpg");
+	background-color: green;
+	background-clip: content-box;
+	box-sizing: border-box;
 }
 
-.first-image .expand,
-.first-image .normal,
-.first-image .extra-expand,
-.second-image .expand,
-.second-image .extra-expand,
-.second-image .constrict {
-	position: relative;
-	display: inline-block;
- 	margin: 0;
- 	line-height: normal;
+.introduce-img span {
+	display: block;
+	text-indent: 7px;
 }
 
-.first-image .expand {
-	top: 2em;
-	left: 2em;
+.introduce-img:first-child {
+	border-right-width: 15px;
+}
+
+.introduce-img:first-child  span:first-child {
+	font-size: 13px;
+	line-height: 30px;
+	text-indent: 35px;
+}
+
+.introduce-img:first-child span:nth-child(2) {
+	font-size: 11px;
+}
+
+.introduce-img:first-child  span:last-child {
+	font-size: 18px;
+	text-indent: 100px;
+}
+
+.introduce-img:nth-child(2) {
+	border-width: 0 15px;
+}
+
+.introduce-img:nth-child(2) span:first-child {
 	font-size: 16px;
-	color: #fff;
+	padding-top: 85px;
 }
 
-.first-image .normal {
-	top: 4em;
-	left: -1em;
-	color: #fff;
-}
-
-.first-image .extra-expand {
-	top: 2.1em;
-	left: 2em;
+.introduce-img:nth-child(2) span:nth-child(2) {
 	font-size: 20px;
-	text-align: right;
-	color: #fff;
-} 
-
-.second-image {
-	margin-top: 4.45em;
-	margin-left: 1em;
-	background: transparent url("../image/wallpaper.jpg") no-repeat top right;
+	text-indent: 100px;
 }
 
-.second-image .expand {
-	top: 4.5em;
-	font-size: 16px;
-	text-align: left;
-}
-
-.second-image .extra-expand {
-	top: 3.2em;
-	font-size: 22px;
+.introduce-img:nth-child(2) span:last-child {
+	font-size: 12px;
+	padding: 11px 7px 0 0;
 	text-align: right;
 }
 
-.second-image .constrict {
-	top: 9em;
-	margin-right: 8px;
-	white-space: pre-wrap;
-	color: #fff;
+
+
+.introduce-img:last-child {
+	border-left-width: 15px;
 }
 
-.third-image {
-	float: right;
-	margin: 4.5em 1em 0 0;
-	margin-left: 1em;
-	background: transparent url("../image/wallpaper.jpg") no-repeat bottom left;
+.introduce-img:last-child span {
+	display: none;
 }
+
 
 .article {
+	float: right;
 	display: inline-block;
-	width: 450px;
-	margin-left: 246px;
+	width: 420px;
+	margin-right: 30px;
 	text-align: left;
 }
 
@@ -206,9 +190,8 @@ abbr {
 }
 
 .article:first-of-type {
-	position: absolute;
-	top: 32.5em;
-	margin-left: 0.5em;
+	float: left;
+	margin-left: 30px;
 	width: 210px;
 }
 
