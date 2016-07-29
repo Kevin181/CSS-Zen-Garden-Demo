@@ -22,6 +22,7 @@ abbr {
 
 .page-wrapper {
 	width: 750px;
+	height: 1480px;
 	margin: 0 auto;
 	background-color: #849AA9;
 }
@@ -33,19 +34,20 @@ abbr {
 	height: 8.5em;
 	background: transparent url("../image/header.png") repeat top left;
 	opacity: 0.8;
-	box-shadow: 0 3px 4px #444;
+	box-shadow: 0 3px 3px #444;
 }
 
 .header:before {
 	content: "storm weather by dave shea";
 	position: absolute;
-	left: 13%;
-	top: 80em;
+	left: 100px;
+	top: 850px;
 	padding-top: 6px;
-	width: 9em;
+	width: 105px;
 	height: 3em;
 	color:rgba(0,0,0,0.2);
 	font-size: 10px;
+	text-align: center;
 	border-radius: 4em/1.5em;
 	background-color: rgba(255,255,255,0.1);
 }
@@ -53,9 +55,9 @@ abbr {
 .header:after {
 	content: "";
 	position: absolute;
-	left: 2%;
+	left: 7px;
 	top: 0.40em;
-	width: 96.1%;
+	width: 745px;
 	height: 7.5em;
 	background-color: transparent;
 	border: 1px solid rgba(255,255,255,0.6);
@@ -66,18 +68,17 @@ abbr {
 .header h1 {
 	display: inline-block;
 	float: left;
-	margin: 0.5em 0 0 30px;
-	width: 9em;
+	margin: 40px 0 0 30px;
+	width: 280px;
 	text-align: center;
 	color: rgba(255,255,255,1);
-	font-size: 3em;
 	font-weight: lighter;
 	border-top: medium double rgba(255,255,255,0.8);
 }
 
 .header h2 {
 	margin: 0 0 0 30px;
-	width: 324px;
+	width: 280px;
 	text-align: center;
 	color: rgba(233,243,234,1);
 	font-size: 9px;
@@ -89,20 +90,11 @@ abbr {
 
 .introduce {
 	box-sizing: border-box;
+	height: 211px;
 	margin: 55px 0;
 }
 
 .introduce-img {
-	/*display: inline-block;
-	margin: 0;
-	padding: 1px;
-	width: 25%;
-	height: 15.6em;
-	line-height: 0;
-	border: 1.5em solid #fff;
-	background-clip: padding-box;
-	box-shadow: 0 3px 4px #666;
-	opacity: 0.7;*/
 	float: left;
 	padding: 20px;
 	width: 33.333%;
@@ -114,6 +106,8 @@ abbr {
 	background-color: green;
 	background-clip: content-box;
 	box-sizing: border-box;
+	box-shadow: inset 0 0 0 20px #fff;
+	opacity: 0.8;
 }
 
 .introduce-img span {
@@ -141,11 +135,12 @@ abbr {
 }
 
 .introduce-img:nth-child(2) {
-	border-width: 0 15px;
+	border-width: 0 22.5px;
 }
 
 .introduce-img:nth-child(2) span:first-child {
 	font-size: 16px;
+	text-indent: 9px;
 	padding-top: 85px;
 }
 
@@ -156,7 +151,7 @@ abbr {
 
 .introduce-img:nth-child(2) span:last-child {
 	font-size: 12px;
-	padding: 11px 7px 0 0;
+	padding: 11px 3px 0 0;
 	text-align: right;
 }
 
@@ -180,7 +175,8 @@ abbr {
 }
 
 .article h3 {
-	margin-bottom: 0;
+	margin: 3px 0 0 0;
+	font-size: 14px;
 }
 .article p {
 	margin-top: 0;
@@ -203,16 +199,19 @@ abbr {
 }
 
 .contentInfo {
-	margin-left: 36.8%;
+	float: right;
+	margin-right: 30px;
 	width: 58%;
 	font-size: 11px;
 	line-height: 15px;
-	text-align: left;
+	text-align: justify;
 }
 
 .footer {
-	margin-right: 2em;
-	text-align: right;
+	float: right;
+	clear: both;
+	margin-right: 30px;
+	
 }
 
 .footer a {
@@ -230,17 +229,22 @@ abbr {
 	border-color: transparent;
 	background-color: #fff;
 }
+.side-line {
+	float: right;
+	clear: both;
+}
 
 .link-style {
-	margin-left: 35%;
+	margin-right: 60px;
 	text-align: left;
 }
 
-.link-style:first-of-type {
+.link-style:first-child {
 	position: absolute;
 	top: 1.5em;
-	margin-left: 360px;
-	width: 25%;
+	left: 50%;
+	margin: 0 0 0 -29px;
+	width: 368px;
 	color: grey;
 	font-weight: normal;
 }
@@ -276,6 +280,7 @@ abbr {
 }
 
 .link-style h3 {
+	font-size: 14px;
 	margin: 0;
 }
 
@@ -294,16 +299,12 @@ abbr {
 @media screen and (max-width:768px) {
 	.page-wrapper {
 		width: 100%;
+		height: auto;
 	}
 
 	.header {
-		position: relative;
-		left: -2px;
-		width: 101.5%;
-		height: 8.5em;
-		text-align: center;
-		background: transparent url("../image/header.png") repeat top left;
-		box-shadow: 0 3px 4px #444;
+		position: static;
+		width: 100%;
 	}
 	
 	.header:before,
@@ -314,8 +315,11 @@ abbr {
 	.header h1 {
 		float: none;
 		display: inline-block;
+		width: 100%;
 		text-align: center;
-		margin: 0.5em  0 0 0;
+		margin: 0;
+		padding: 35px  0 0 0;
+		border-width: 0;
 	}
 
 	.header h2 {
@@ -325,72 +329,50 @@ abbr {
 	}
 
 	.introduce {
+		margin: 25px 0;
 		width: 100%;
-		height: 440px;
-	}
-
-	.introduce p:last-of-type a {
-		color: transparent; 
 	}
 
 	.introduce-img {
-		display: inline-block; 
-		padding: 0;
-		width: 47%;
-		height: 15.6em;
-		margin: 2em 1.5%;
-		background-clip: border-box;
+		margin-bottom: 25px;
+		width: 50%;
+		background-clip: padding-box;
 		background-size: cover;
-		border: 0;
-		box-shadow: 0 3px 4px #666;
+		border-width: 0 20px 0 20px;
+		box-shadow: 0 3px 4px transparent;
 	}
 
-	.first-image {
-		margin: 2em 0 0 1.5%;
+	.introduce-img:first-child,
+	.introduce-img:nth-child(2),
+	.introduce-img:last-child {
+		border-width: 0 20px 0 20px;
 	}
 
-	.first-image .normal {
-	    left: 0;
-	    top: 4em;
-	}
-
-	.first-image .extra-expand {
-	    left: 0;
-	}
-
-	.second-image {
-		float: right;
-		margin: 2em 1.5% 0 0;
-	}
-
-	.second-image .extra-expand {
-	    left: -2.5em;
-	    top: 4.5em;
-	}
-
-	.third-image {
-		float: none;
-		margin: 2em auto;
-		width: 97%;
+	.introduce-img:last-child {
+		width: 100%;
 	}
 
 	.article {
-		margin: 0;
-		width: 93%;
+		float: none;
+		width: auto;
+		margin: 0 20px;
 	}
 	
 	.article:first-of-type {
-		position: static;
-		margin: 0;
-		width: 93%;
+		float: none;
+		margin: 0 20px;
+		width: auto;
 	}
 
 	.contentInfo {
-		margin-left: 2%;
-		width: 96%;
+		float: none;
+		margin: 0 20px;
+		width: auto;
 	}
 
 	.side-line {
+		float: none;
+		margin: 0 20px;
 		padding-bottom: 30px;
 	}
 
@@ -398,7 +380,7 @@ abbr {
 	.link-style:first-of-type {
 		width: 96%;
 		margin-top: 1em;
-		margin-left: 2%;
+		margin-left: 0;
 	}
 
 	.link-style:first-of-type {
@@ -421,78 +403,35 @@ abbr {
 		list-style-type: none;
 	}
 
-	.appendix+p {
-		padding-top: 3em;
-		font-size: 1.4em;
-	}
-
-	.extra-expand {
-		font-size: 16px;
-		font-size: 2.5em;
-	}
-
-	.constrict {
-		text-align: right;
-	}
-
 	.footer {
-		margin-top: 15px;
+		float: none;
+		margin: 15px 20px;
 	}
 
-}
-
-@media screen and (max-width: 640px) {
-	.first-image {
-		margin-top: 1em;
-	}
-
-	.second-image {
-		margin-top: 1em;
-	}
-
-	.third-image {
-		margin: 1em 1.5% 2em 1.5%;
-	}
-
-	.introduce {
-		height: 400px;
-	}
 }
 
 @media screen and (max-width: 480px) {
 	.header h1 {
 		font-size: 2em;
 	}
-	
-	.first-image,
-	.second-image {
-		float: none;
-		display: block;
-		width: 95%;
-		margin: 1em auto;
-	}
-
-	.third-image {
-		display: none;
-	}
 
 	.introduce {
+		height: auto;
+	}
+
+	.introduce-img {
+		float: none;
+		width: 100%;
 		display: block;
-		height: 390px;
+	}
+
+	.introduce-img:nth-child(2),
+	.introduce-img:last-child {
+		width: 100%;
 	}
 
 	.link-style:first-of-type ul {
 		width: 100%;
 		height: auto;
-	}
-	
+	}	
 }
-
-@media screen and (max-width: 320px) {
-	.introduce-img {
-		margin: 1em 3.5%;
-		width: 93%;
-	}
-}
-
-
