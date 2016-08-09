@@ -22,9 +22,15 @@ abbr {
 
 .page-wrapper {
 	width: 750px;
-	height: 1480px;
 	margin: 0 auto;
 	background-color: #849AA9;
+}
+
+.page-wrapper:after {
+	content:"\200B"; 
+	display:block; 
+	height:0; 
+	clear:both;
 }
 
 .header {
@@ -40,15 +46,15 @@ abbr {
 .header:before {
 	content: "storm weather by dave shea";
 	position: absolute;
-	left: 100px;
+	left: 75px;
 	top: 850px;
 	padding-top: 6px;
 	width: 105px;
-	height: 3em;
+	height: 40px;
 	color:rgba(0,0,0,0.2);
 	font-size: 10px;
 	text-align: center;
-	border-radius: 4em/1.5em;
+	border-radius: 40px/25px;
 	background-color: rgba(255,255,255,0.1);
 }
 
@@ -57,11 +63,24 @@ abbr {
 	position: absolute;
 	left: 7px;
 	top: 0.40em;
+	z-index: -1;
 	width: 745px;
 	height: 7.5em;
 	background-color: transparent;
-	border: 1px solid rgba(255,255,255,0.6);
-	border-radius: 6px;
+	background: radial-gradient(circle at top left, transparent 10px,white 12px,rgba(94,140,170,0.5) 0) top left,
+                radial-gradient(circle at top right, transparent 10px,white 12px, rgba(94,140,170,0.5) 0) top right,
+                radial-gradient(circle at bottom left, transparent 10px,white 12px, rgba(94,140,170,0.5) 0) bottom left,
+                radial-gradient(circle at bottom right, transparent 10px,white 12px, rgba(94,140,170,0.5) 0) bottom right,
+                linear-gradient(to bottom, white 1px,transparent 0) 11px 0,
+                linear-gradient(to bottom, white 1px,transparent 0) 361px 0,
+                linear-gradient(to bottom, white 1px,transparent 0) 11px 119px,
+                linear-gradient(to bottom, white 1px,transparent 0) 361px 119px,
+                linear-gradient(to right, white 1px,transparent 0) 0 10px,
+                linear-gradient(to right, white 1px,transparent 0) 0 49px,
+                linear-gradient(to left, white 1px,transparent 0) 373px 10px,
+                linear-gradient(to left, white 1px,transparent 0) 373px 49px;
+    background-size:  50% 50%;
+    background-repeat: no-repeat;
 
 }
 
@@ -80,7 +99,7 @@ abbr {
 	margin: 0 0 0 30px;
 	width: 280px;
 	text-align: center;
-	color: rgba(233,243,234,1);
+	color: rgba(255,255,255,1);
 	font-size: 9px;
 	font-weight: lighter;
 	font-style: italic;
@@ -155,8 +174,6 @@ abbr {
 	text-align: right;
 }
 
-
-
 .introduce-img:last-child {
 	border-left-width: 15px;
 }
@@ -201,7 +218,7 @@ abbr {
 .contentInfo {
 	float: right;
 	margin-right: 30px;
-	width: 58%;
+	width: 420px;
 	font-size: 11px;
 	line-height: 15px;
 	text-align: justify;
@@ -232,11 +249,7 @@ abbr {
 .side-line {
 	float: right;
 	clear: both;
-}
-
-.link-style {
-	margin-right: 60px;
-	text-align: left;
+	width: 463px;
 }
 
 .link-style:first-child {
